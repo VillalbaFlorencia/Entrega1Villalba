@@ -1,3 +1,4 @@
+
 - Levantar el servidor y acceder a la pagina 
 - Lo primero que podemos ver es la pagina de inicio, la cual tiene una imagen y un texto de bienvenida. 
 - Luego en el menú de recomendadas podemos ver una lista de las principales series recomendadas.

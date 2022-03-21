@@ -15,6 +15,11 @@ Luego crear un entorno virtual y activarlo:
 py -m venv venv
 . venv/Scripts/activate
 ```
+Instalar el paquete necesario:
+
+```sh
+pip install django
+```
 
 Levantar el servidor y acceder a la pagina:
 

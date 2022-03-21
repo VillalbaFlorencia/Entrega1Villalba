@@ -6,7 +6,7 @@ class Series(models.Model):
     netflix = models.BooleanField()
     
     def __str__(self):
-        return f'{self.nombre}'
+        return f'{self.nombre}, {self.categoria}'
  
     
 class Peliculas(models.Model):

@@ -22,10 +22,10 @@
             <div class="container">
                 <a class="navbar-brand" href={% url 'index' %}>Inicio</a>
                 <a class="navbar-brand" href={% url 'recomendadas' %}>Recomendadas</a>
-                <a class="navbar-brand" href={% url 'crear_recomendacion_serie' %}>Crear Recomendación Serie</a>
-                <a class="navbar-brand" href={% url 'crear_recomendacion_pelicula' %}>Crear Recomendación Pelicula</a>
-                <a class="navbar-brand" href={% url 'crear_recomendacion_documental' %}>Crear Recomendación Documental</a>
-                <a class="navbar-brand" href={% url 'lista_series' %}>Lista Series</a>
+                <a class="navbar-brand" href={% url 'crear_recomendacion_serie' %}>Recomendar Serie</a>
+                <a class="navbar-brand" href={% url 'crear_recomendacion_pelicula' %}>Recomendar Pelicula</a>
+                <a class="navbar-brand" href={% url 'crear_recomendacion_documental' %}>Recomendar Documental</a>
+                <a class="navbar-brand" href={% url 'lista_series' %}>Lista de recomendaciones de Series</a>
             </div>
         </nav>
         <!-- Masthead-->
@@ -45,11 +45,11 @@
             </div>
         </header>
         {% endblock 'header_block' %}
-
+        <div style = 'margin: 30px'>
         {% block body_block %}
         
         {% endblock body_block %}
-        
+        </div>
         <!-- Footer-->
         <footer class="footer bg-light">
             <div class="container">

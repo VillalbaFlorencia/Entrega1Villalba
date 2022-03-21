@@ -5,8 +5,8 @@
 Lo primero que se debe hacer es clonar el repositorio:
 
 ```sh
-git clone https://github.com/VillalbaFlorencia/Entrega1Villlaba.git
-cd Entrega1Villlaba
+git clone https://github.com/VillalbaFlorencia/Entrega1Villalba.git
+cd Entrega1Villalba
 ```
 
 Luego crear un entorno virtual y activarlo:

@@ -40,3 +40,15 @@ que completar el nombre, la categoría (drama / suspenso / terror / etc) y tilda
  hay que completar el nombre, la categoría (drama / suspenso / terror / etc) y tildar si se encuentra o no en netflix. 
 - Luego en lista de recomendaciones de series, hay un formulario para buscar los nombres de las series que se 
 recomendaron en la base de datos, la busqueda arroja un listado de los nombres de las series con su categoria. 
+
+## Panel de Administración
+
+Se puede crear un super usuario para acceder al panel de administración, el cual nos da acceso a nuestra base de datos. 
+Para crear el superusuario para acceder al panel debemos ingresar el siguiente código:
+
+```sh
+py manage.py createsuperuser
+```
+Definir el usuario y la contraseña, y luego acceder desde http://127.0.0.1:8000/admin/
+
+En este panel podemos consultar la base de datos, eliminar, modificar o crear elementos. 

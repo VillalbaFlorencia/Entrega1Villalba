@@ -1,26 +1,23 @@
 {% extends 'index/index.html' %}
 
 {% block 'header_block' %}
+<ul>  
+    <li><a href={% url 'crear_recomendacion_serie' %}>Crear Recomendación de Serie</a></li>
+    <li><a href={% url 'busqueda_series' %}>Buscar recomendaciones de Series</a></li>
+</ul>
 {% endblock 'header_block' %}
 
 {% block body_block %}
 
-<h3>Encontrá recomendaciones de series realizadas por otros usuarios</h3>
-<p></p>
+    <h3>Esta es la lista de series realizadas por otros usuarios</h3>
 
-<form action="" method = 'get'>
-    {% csrf_token %}
-    <table>
-        {{form.as_table}}
-    </table>
-    <p></p>
-    <button>Buscar</button>
-</form>
 
-<p></p>
-
-{% for serie in series %}
-    <li>{{serie}}</li>
-{% endfor %}
+    {% for serie in lista_series %}
+        <li>
+            {{serie}}
+            <a href={% url 'actualizar_recomendacion_serie' serie.id %}>Editar</a>
+            <a href={% url 'borrar_recomendacion_serie' serie.id %}>Borrar</a>
+        </li>
+    {% endfor %}
 
 {% endblock body_block %}

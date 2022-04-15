@@ -1,0 +1,27 @@
+{% extends 'index/index.html' %}
+
+{% block 'header_block' %}
+{% endblock 'header_block' %}
+
+{% block body_block %}
+
+    <h4>Esta es la lista de peliculas recomendadas por otros usuarios</h4>
+
+    <p>
+        <a href= {% url 'crear_recomendacion_pelicula' %}>Crear recomendación de Pelicula</a>
+
+    </p>
+
+
+    {% for pelicula in object_list %}
+        <li>
+            {{pelicula}}
+            <p>
+                <a href={% url 'detalle_pelicula' pelicula.id %}>Leer más</a>
+                <a href={% url 'editar_pelicula' pelicula.id %}>Editar</a>
+                <a href={% url 'borrar_pelicula' pelicula.id %}>Borrar</a>
+            </p>
+        </li>
+    {% endfor %}
+
+{% endblock body_block %}

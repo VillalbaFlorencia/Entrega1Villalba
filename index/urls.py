@@ -1,7 +1,7 @@
 from django.urls import path
-from . views import index, recomendadas
+from .views import index, recomendadas
 
 urlpatterns = [
     path('', index, name = 'index'),
-    path('recomendadas/', recomendadas, name = 'recomendadas')
+    #path('recomendadas/', recomendadas, name = 'recomendadas'),   
 ]

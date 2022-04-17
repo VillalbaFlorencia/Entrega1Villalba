@@ -2,8 +2,6 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login as django_login, authenticate
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from .models import Avatar
-
-from .models import Avatar
 from .forms import NuestraCreacionUser, NuestraEdicionUser
 from django.contrib.auth.decorators import login_required
 
@@ -86,7 +84,7 @@ def editar(request):
             'last_name': request.user.last_name, 
             'imagen': user_logued.imagen,
             'link': user_logued.link,
-            'more_description': user_logued.more_description    
+            'more_description': user_logued.more_description       
         }
     )
     return render(request, 'accounts/editar.html', {'form': form, 'msj': ''})
@@ -94,3 +92,7 @@ def editar(request):
 
 def about(request):
     return render(request, 'accounts/about.html', {})
+
+@login_required
+def usuario_datos(request):
+    return render(request, 'accounts/usuario_datos.html', {})

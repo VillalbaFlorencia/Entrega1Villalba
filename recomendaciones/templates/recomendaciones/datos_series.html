@@ -5,13 +5,14 @@
 
 {% block body_block %}
     {% if object.netflix == True %}
-        Esta pelicula se encuenta en Netflix
+        <li>Esta serie se encuenta en Netflix</li> 
     {% else %} 
-        Esta pelicula no se encuentra en Netflix
+        <li>Esta serie no se encuentra en Netflix</li> 
     {% endif %}
         <li>Nombre: {{object.nombre}}</li>
-        <li>Categoría: {{object.categoria}}</li> 
-        <li>Descripción de la pelicula: {{object.descripcion | safe }}</li>    
+        <li>Categoría: {{object.categoria}}</li>
+        <li>Descripción de la serie: {{object.descripcion | safe }}</li> 
         <li>Fecha creación: {{object.fecha}}</li>
         <li>Autor: {{object.author}}</li>
+
 {% endblock body_block %}
